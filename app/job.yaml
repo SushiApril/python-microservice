@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: python-job-test
+spec:
+  template:
+    spec:
+      containers:
+        - name: python-runner
+          image: python:3.9
+          command: ["python", "-c", "print('Hello from Kubernetes!')"]
+      restartPolicy: Never
