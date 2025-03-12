@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pymongo
+httpx
+pytest
+kubernetes
