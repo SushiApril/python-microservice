@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "f04689ce-5046-41cf-82da-d7afc96345ba",
+		"name": "python-microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43047530"
+	},
+	"item": [
+		{
+			"name": "Execute python code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"language\": \"python\", \"code\": \"cHJpbnQoIkhlbGxvLCBXb3JsZCIpCg==\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/execute",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"execute"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://127.0.0.1:8000/execute\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"language\": \"python\", \"code\": \"cHJpbnQoIkhlbGxvLCBXb3JsZCIpCg==\"}'\n"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve output from mongodb",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/result/123e4567-e89b-12d3-a456-426614174000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"result",
+						"123e4567-e89b-12d3-a456-426614174000"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"http://127.0.0.1:8000/result/123e4567-e89b-12d3-a456-426614174000\"\n"
+			},
+			"response": []
+		}
+	]
+}
